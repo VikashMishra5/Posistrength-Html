@@ -1,0 +1,252 @@
+.leverage{
+&__sub{
+    &.topSpacing{
+        @include media-breakpoint-up(xl) {
+            margin-top: 4rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+            margin-top: 3rem;
+        } 
+        @include media-breakpoint-down(md) {
+            margin-top: 2rem;
+        }     
+    }
+    & > .container{
+        @include media-breakpoint-up(xl) {
+        padding-left:4rem;
+        padding-right:4rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+        padding-left:2rem;
+        padding-right:2rem;
+        }   
+        }
+        &-con{
+            background-color: $white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            &.bottom-spacing{
+                @include media-breakpoint-down(md) {
+                margin-bottom:1rem;
+                    }  
+            }
+            &:hover{
+            .confidential__sub-head::after{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            .confidential__sub-content{
+                transform: scale(1.033);
+            }
+            }
+            }
+            &-head{
+                position: relative;
+            &.gray{
+            background-color:$gray-300;
+            &::after{
+                content:'';
+                position: absolute;
+                height: 0;
+                width: 0;
+                z-index: 1;
+                -webkit-transform: rotate(-40deg);
+                transform: rotate(-40deg);
+                transition: transform 0.2s ease-in-out;
+                @include media-breakpoint-up(xl) {
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 38px solid $gray-300;
+                    bottom: -28px;
+                    left: 32px;
+                } 
+                @include media-breakpoint-between(md,xl) {
+                    border-left: 9px solid transparent;
+                    border-right: 9px solid transparent;
+                    border-top: 34px solid $gray-300;
+                    bottom: -24px;
+                    left: 30px;
+                } 
+                @include media-breakpoint-down(md) {
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-top: 32px solid $gray-300;
+                    bottom: -23px;
+                    left: 29px;
+                }     
+            }
+            }
+            @include media-breakpoint-up(xl) {
+                padding:1.35rem 1.25rem 0.95rem;
+            } 
+            @include media-breakpoint-down(xl) {
+              padding:1.15rem 1.05rem 0.75rem;
+            } 
+            
+            & > h3{
+            margin-bottom: 0;
+            font-family:'Khula-Bold',sans-serif;
+            @include media-breakpoint-up(xl) {
+                line-height: 1.4rem;
+                font-size: 1.4rem;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                line-height: 1.35rem;
+                font-size: 1.35rem;
+            } 
+            @include media-breakpoint-down(md) {
+                line-height: 1.25rem;
+                font-size: 1.25rem;
+            } 
+            }
+            & > .icon{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                right: 15px;
+                top: 5px;
+                background-image: url(../images/mission-icon.svg);
+                background-repeat: no-repeat;
+            
+            
+            
+                @include media-breakpoint-up(xl) {
+                    background-size: 900px;
+                    background-position-y: -39px;
+                    background-position-x: -680px;
+                }
+                @include media-breakpoint-down(xl) {
+                    background-size: 800px;
+                    background-position-y: -36px;
+                    background-position-x: -598px;
+                }
+            
+            
+            }
+            }
+            &-content{
+                font-family: 'Khula-SemiBold',sans-serif;
+                transition: transform 0.2s ease-in-out;
+                @include media-breakpoint-up(xl) {
+                    padding:2rem 1.25rem 0.95rem;
+                } 
+                @include media-breakpoint-down(xl) {
+                  padding:1.8rem 1.05rem 0.75rem;
+                  font-size:15px;
+                }
+            & > ul{
+            margin-bottom:0;
+            @include media-breakpoint-down(sm) {
+            padding-left:0;
+            }
+            }
+            }
+            &-img{
+                overflow: hidden;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    height: 420px;
+                    max-width: 450px;
+                    width: 100%;
+                    position: relative;
+                    @include media-breakpoint-up(lg) {
+                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    background-size:contain;
+                    }
+                    @include media-breakpoint-down(lg) {
+                    background-size:cover;
+                    }
+                
+                    &.leverage1{
+                    background-image:url(../images/leverage/261ab509c7d20233fbb6ebf53fc8d0fb.jpg);
+                
+                    @include media-breakpoint-up(xl) {
+                    background-position: top right -300px;
+                    }
+                    @include media-breakpoint-between(md,xl) {
+                    background-position: top right -400px;
+                    }
+                    @include media-breakpoint-up(lg) {
+                    margin-left: auto;
+                    } 
+                    
+                    -webkit-animation: imagemoveLeverage 12s infinite alternate;
+                    animation: imagemoveLeverage 12s infinite alternate;
+                
+                    }
+                    &.leverage2{
+                        background-image: url(../images/leverage/3c350d834222172747daaeb56e38e075.png);
+                        @include media-breakpoint-up(xl) {
+                            background-position: top 50px left -480px;
+                            }
+                            @include media-breakpoint-between(md,xl) {
+                            background-position: top -10px left -450px;
+                            }
+                            -webkit-animation: imagemoveLeverage2 12s infinite alternate;
+                            animation: imagemoveLeverage2 12s infinite alternate;
+                    }
+                    &.leverage3{
+                        background-image: url(../images/leverage/x13dc5d9cc83e230c8f64960fe24b94ad.jpg.pagespeed.ic.soo_TFLQce.webp);
+                        @include media-breakpoint-up(xl) {
+                            background-position: top right -300px;
+                            }
+                            @include media-breakpoint-between(md,xl) {
+                            background-position: top right -400px;
+                            }
+                    @include media-breakpoint-up(lg) {
+                        margin-left: auto;
+                        } 
+                        -webkit-animation: imagemoveLeverage 12s infinite alternate;
+                        animation: imagemoveLeverage 12s infinite alternate;
+                    }
+                    &.leverage4{
+                        background-position: left;
+                        background-image: url(../images/leverage/3ce2b20df456c437b76c7294dc9b67ae.jpg);
+                        @include media-breakpoint-up(xl) {
+                            background-position: top 50px left 170px;
+                            }
+                            @include media-breakpoint-between(md,xl) {
+                            background-position: top -10px left 120px;
+                            }
+                            -webkit-animation: imagemoveLeverage2 12s infinite alternate;
+                            animation: imagemoveLeverage2 12s infinite alternate;
+                    }
+                    &.leverage5{
+                        background-image: url(../images/leverage/x74a85024d7a22ea0006be9a405d32b50.jpg.pagespeed.ic.I-uTHbzb8P.jfif);
+                        @include media-breakpoint-up(xl) {
+                            background-position: top right -300px;
+                            }
+                            @include media-breakpoint-between(md,xl) {
+                            background-position: top right -400px;
+                            }
+                    @include media-breakpoint-up(lg) {
+                        margin-left: auto;
+                        } 
+                        -webkit-animation: imagemoveLeverage 12s infinite alternate;
+                        animation: imagemoveLeverage 12s infinite alternate;
+                    }
+                
+                @keyframes imagemoveLeverage {
+                0% {    background-position: top right -150px;}
+                50% {        background-position: top right 0;}
+                100% {background-position: top right -150px;}
+                }
+                @-webkit-keyframes imagemoveLeverage{
+                0% {    background-position: top right -150px;}
+                50% {        background-position: top right 0;}
+                100% {background-position: top right -150px;}
+                }
+                    @keyframes imagemoveLeverage2 {
+                    0% {background-position:top 50px left 20px;}
+                    50% {background-position: top 50px left -120px;}
+                    100% {background-position: top 50px left 20px;}
+                    }
+                    @-webkit-keyframes imagemoveLeverage2{
+                    0% {background-position:top 50px left 20px;}
+                    50% {background-position: top 50px left -120px;}
+                    100% {background-position: top 50px left 20px;}
+                    }
+                
+                }
+}
+}

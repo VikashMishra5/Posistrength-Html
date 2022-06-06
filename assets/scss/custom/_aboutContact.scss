@@ -1,0 +1,167 @@
+.aboutContact{
+    &__sub{
+    
+    background-color: #f0f0f0;
+    
+    @include media-breakpoint-up(xl) {
+    padding-top:4.5rem;
+    padding-bottom:4.5rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+    padding-top:3.5rem;
+    padding-bottom:3.5rem;
+    } 
+    @include media-breakpoint-down(md) {
+    padding-top:2.5rem;
+    padding-bottom:2.5rem;
+    } 
+    
+    
+    &.topSpacing{
+    @include media-breakpoint-up(xl) {
+    margin-top:4rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+    margin-top:3rem;
+    } 
+    @include media-breakpoint-down(md) {
+    margin-top:2rem;
+    }     
+    }
+    }
+    &__container{
+    background-color:$color-f4782e;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    
+    @include media-breakpoint-up(xl) {
+        padding:5rem;
+    } 
+    @include media-breakpoint-between(lg,xl) {
+        padding:4.5rem;
+    } 
+    @include media-breakpoint-between(sm,lg) {
+        padding:4rem;
+    } 
+    @include media-breakpoint-down(sm){
+       padding:3.5rem;
+    }
+    
+    
+    @include media-breakpoint-up(md) {
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    } 
+    
+    &::before{
+        content:'';
+        position:absolute;
+        top:-50px;
+        left:70px;
+        height:100px;
+        width:100px;
+        background-color:#f58441;
+        border-radius: 50px;
+        }
+    &::after{
+        content:'';
+        position:absolute;
+        bottom:-50px;
+        left:35%;
+        height:100px;
+        width:100px;
+        background-color:#f58441;
+        border-radius: 50px;
+        @include media-breakpoint-down(md) {
+         display:none;
+        }         
+        }
+
+    }
+
+
+
+    &-left{
+    color:$white;
+    flex:1;
+    & > h4{
+        font-family: 'Khula-Light',sans-serif;
+        @include media-breakpoint-up(xl) {
+        font-size: 2.25rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+        font-size: 2rem;
+        } 
+        @include media-breakpoint-down(md) {
+        font-size:1.75rem;
+        }         
+    }
+    & > h3{
+        font-family: 'OpenSans-Bold',sans-serif;
+        @include media-breakpoint-up(xl) {
+            font-size: 2.25rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+            font-size: 2rem;
+        } 
+        @include media-breakpoint-up(lg) {
+         max-width:500px;
+        } 
+        @include media-breakpoint-down(lg) {
+         max-width:400px;
+        } 
+        @include media-breakpoint-down(md) {
+            font-size: 1.75rem;
+        }         
+    }
+
+    }
+    &-right{
+        position:relative;
+        &::before{
+            content:'';
+            position:absolute;
+            height:150px;
+            width:150px;
+            border-radius: 75px;
+            background-color: #f58441;
+            top: -49px;
+             @include media-breakpoint-up(md) {
+                left: 16px;
+            }  
+             @include media-breakpoint-down(md) {
+                left: 7px;
+            }  
+            }
+            @include media-breakpoint-down(md) {
+    margin-top:3.5rem;
+            }    
+    }
+    &-btn{
+    border: 0;
+    outline: none;
+    padding: 0.85rem 4rem 0.85rem 2rem;
+    border-radius: 28px;
+    position: relative;
+    text-align: center;
+    font-family:'OpenSans-SemiBold',sans-serif;
+    background:center right 30px/26px url(../images/about/arrow-black.svg) no-repeat $white;
+    transition:all 0.3s ease-in-out;
+    @include media-breakpoint-up(xl) {
+font-size:1rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+font-size:0.85rem;   
+    } 
+    @include media-breakpoint-down(md) {
+font-size:0.75rem;    
+    }     
+
+    &:hover{
+  color:$white;
+  background:center right 30px/26px url(../images/about/arrow-white.svg) no-repeat $black;
+    }
+    }
+    }

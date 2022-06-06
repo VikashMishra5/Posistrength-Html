@@ -1,0 +1,313 @@
+.doyouKnow{
+&__sub{
+
+    &.topSpacing{
+        @include media-breakpoint-up(xl) {
+        margin-top:4rem;
+        margin-bottom:2.5rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+            margin-top:3rem;
+        margin-bottom:1.75rem;
+
+        } 
+        @include media-breakpoint-down(md) {
+            margin-top:2rem;
+        margin-bottom:1.25rem;
+        }  
+        }
+        & > .container{
+            @include media-breakpoint-up(xl) {
+            padding-left:4rem;
+            padding-right:4rem;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                padding-left:2rem;
+                padding-right:2rem;
+            }   
+            }
+            &-head{
+            & > h4{
+            font-family: "Khula-Bold",sans-serif;
+            padding-left:4rem;
+            font-size:17px;
+            position: relative;
+            font-style: italic;
+            &::before{
+            content:'';
+            position:absolute;
+            height:4px;
+            width:40px;
+            background-color:$color-f4782e;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            left:0px;
+            top:5px;
+            }
+            }
+            & > h2{
+            font-family: "Khula-Bold",sans-serif;
+            @include media-breakpoint-up(xl) {
+            font-size:2.5rem;
+            line-height: 3.25rem;
+            margin-top:1.25rem;
+                } 
+                @include media-breakpoint-between(md,xl) {
+                    font-size:2.25rem;
+                    line-height: 3rem;
+                    margin-top:1rem;
+                } 
+                @include media-breakpoint-down(md) {
+                    font-size:1.75rem;
+                    line-height: 2rem;
+                    margin-top:0.75rem;
+                } 
+            
+            }
+            } 
+}
+}
+
+.stories{
+&__sub{
+    background-color:$color-f0f0f0;
+&.topSpacing{
+@include media-breakpoint-up(xl) {
+padding-top:4rem;
+padding-bottom:4rem;
+} 
+@include media-breakpoint-between(md,xl) {
+padding-top:3rem;
+padding-bottom:3rem;
+
+} 
+@include media-breakpoint-down(md) {
+padding-top:2rem;
+padding-bottom:2rem;
+}  
+}
+        & > .container{
+            @include media-breakpoint-up(xl) {
+            padding-left:4rem;
+            padding-right:4rem;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                padding-left:2rem;
+                padding-right:2rem;
+            }   
+            }
+
+
+&-left{
+
+position:sticky;
+top:100px;
+
+@include media-breakpoint-up(md) {
+max-width:310px;
+} 
+@include media-breakpoint-down(md){
+margin-bottom:2rem;
+}
+&-headSub{
+width:75px;
+padding-right:30px;
+}
+&-headBorder{
+width: 45px;
+height: 4px;
+background-color:$black;
+border-radius: 2px;
+margin-bottom: 1.25rem;
+margin-left:3px;
+position: relative;
+& > span{
+position:absolute;
+background-color:$black;
+height:4px;
+width:4px;
+border-radius: 2px;
+top:0px;
+display: inline-block;
+&.one{right:-10px;}
+&.two{right:-20px;}
+&.three{right:-30px;}
+
+
+
+animation-name: border-animation;
+animation-duration: 1.25s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+
+-webkit-animation-name: border-animation;
+-webkit-animation-duration: 1.25s;
+-webkit-animation-timing-function: ease-in;
+-webkit-animation-iteration-count: infinite;
+
+
+@-webkit-keyframes border-animation{
+    0%   {width:5px;}
+    40%  {width:12px;}
+    50%  {width:12px;}
+    85%  {width:5px;}
+    100%  {width:5px;}
+    }
+    
+    @keyframes border-animation{
+        0%   {width:5px;}
+        40%  {width:12px;}
+        50%  {width:12px;}
+        85%  {width:5px;}
+        100%  {width:5px;}
+    }
+
+}
+
+}
+
+& > h2{
+font-family: 'Khula-Bold',sans-serif;
+@include media-breakpoint-up(xl) {
+font-size:3rem;
+line-height:3.75rem;
+} 
+@include media-breakpoint-between(md,xl) {
+    font-size:2.5rem;
+    line-height:3.25rem;
+} 
+@include media-breakpoint-down(md) {
+    font-size:2rem;
+}
+}
+& > p{
+@include media-breakpoint-up(xl) {
+    font-size: 18px;
+line-height: 32px;
+}  
+@include media-breakpoint-between(md,xl) {
+    font-size: 17px;
+    line-height: 29px;
+} 
+@include media-breakpoint-down(md) {
+    line-height: 28px;
+} 
+}
+}
+
+&-link{
+@include media-breakpoint-up(xl) {
+margin-top: 1.5rem;
+} 
+& > a{
+display: inline-block;
+text-decoration: none;
+font-family: "OpenSans-Bold",sans-serif;
+color: $black;
+border: 3px solid $black;
+border-radius: 28px;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+background: center right 15px/23px url(../images/about/arrow-black.svg) no-repeat;
+font-size:15px;
+@include media-breakpoint-up(xl) {
+padding: 0.65rem 2.8rem 0.65rem 1.15rem;
+} 
+@include media-breakpoint-down(xl) {
+padding: 0.55rem 2.65rem 0.55rem 0.9rem;
+}  
+&:hover{
+background-color: #000;
+background-image: url(../images/about/arrow-white.svg);
+color: #fff;
+}            
+}
+}
+
+&-right{
+&Con{
+background: $white;
+padding: 1.5rem;
+max-width: 500px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 4px;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+position: relative;
+margin-bottom:1.5rem;
+&:nth-last-child(1){
+margin-bottom:0;  
+}
+&::before{
+content:'';
+position:absolute;
+top:0px;
+left:50%;
+transform: translateX(-50%);
+height:8px;
+width:80px;
+border-radius:4px;
+background-color:$color-f4782e;
+}
+& > h4{
+font-size: 1.125rem;
+font-family: 'Khula-Bold',sans-serif;
+position: relative;
+text-align: center;
+
+@include media-breakpoint-up(xl) {
+margin-top:2.5rem;
+} 
+@include media-breakpoint-between(md,xl) {
+margin-top:2.25rem;
+} 
+@include media-breakpoint-down(md) {
+margin-top:2rem;
+} 
+
+&::before{
+content:'';
+position:absolute;
+top:-30px;
+left:50%;
+transform:translateX(-50%);
+height:25px;
+width:25px;
+background: center/25px url(../images/testimonials/quotation.svg) no-repeat;
+}
+}
+}
+&Review{
+@include media-breakpoint-up(md) {
+display: flex;
+}
+@include media-breakpoint-down(md) {
+text-align: center;
+}
+}
+&Img{
+    @include media-breakpoint-up(md) {
+        padding-right:0.75rem;
+            }
+        @include media-breakpoint-down(md) {
+        margin-bottom:0.5rem;
+            }
+& > img{
+max-width:60px;
+border-radius:30px;
+}
+}
+&Text{
+font-family: 'OpenSans-Light',sans-serif;
+
+@include media-breakpoint-up(md) {
+    font-size: 17px;
+    line-height: 30px;
+    } 
+
+
+}
+}
+
+} 
+}

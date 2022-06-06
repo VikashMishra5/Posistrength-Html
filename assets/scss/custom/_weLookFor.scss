@@ -1,0 +1,118 @@
+.weLookFor{
+&__sub{
+&.topSpacing{
+@include media-breakpoint-up(xl) {
+margin-top:4rem;
+} 
+@include media-breakpoint-between(md,xl) {
+margin-top:3rem;
+} 
+@include media-breakpoint-down(md) {
+margin-top:2rem;
+}  
+}
+& > .container{
+@include media-breakpoint-up(xl) {
+padding-left:4rem;
+padding-right:4rem;
+} 
+@include media-breakpoint-between(md,xl) {
+padding-left:2rem;
+padding-right:2rem;
+}   
+}
+&-head{
+& > h4{
+font-family: "Khula-Bold",sans-serif;
+padding-left:4rem;
+font-size:17px;
+position: relative;
+font-style: italic;
+&::before{
+content:'';
+position:absolute;
+height:4px;
+width:40px;
+background-color:$color-f4782e;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+left:0px;
+top:5px;
+}
+}
+& > h2{
+font-family: "Khula-Bold",sans-serif;
+@include media-breakpoint-up(xl) {
+font-size:2.5rem;
+line-height: 3.25rem;
+margin-top:1.25rem;
+} 
+@include media-breakpoint-between(md,xl) {
+font-size:2.25rem;
+line-height: 3rem;
+margin-top:1rem;
+} 
+@include media-breakpoint-down(md) {
+font-size:1.75rem;
+line-height: 2rem;
+margin-top:0.75rem;
+} 
+
+}
+} 
+&-col{
+margin-top:0.75rem;
+box-shadow:0px 0px 6px rgba(0, 0, 0, 0.15);
+@include media-breakpoint-up(lg) {
+padding:0.75rem 0.75rem 0.25rem;
+height:100%;
+} 
+@include media-breakpoint-between(md,lg) {
+height:calc(100% - 0.75rem);   
+}
+@include media-breakpoint-down(lg) {
+padding:0.75rem;
+} 
+    
+& > img{
+max-width: 86px;
+margin-bottom: 1rem;
+}
+& > h4{
+font-size: 1.25rem;
+font-family: 'Khula-Bold',sans-serif;
+margin-bottom:0.625rem;
+}
+& > p{
+margin-bottom:0;
+line-height:1.75rem;
+}
+}
+&-link{
+    text-align:center;
+        margin-top:2rem;
+
+& > a{
+display: inline-block;
+text-decoration: none;
+font-family: "OpenSans-Bold",sans-serif;
+color: $black;
+border: 3px solid $black;
+border-radius: 28px;
+transition: all 0.3s ease-in-out;
+background: center right 15px/25px url(../images/about/arrow-black.svg) no-repeat;
+@include media-breakpoint-up(xl) {
+padding: 0.75rem 3rem 0.75rem 1.25rem;
+} 
+@include media-breakpoint-down(xl) {
+padding: 0.65rem 2.75rem 0.65rem 1rem;
+} 
+&:hover {
+background-color: $black;
+background-image: url(../images/about/arrow-white.svg);
+color: $white;
+}        
+}
+}
+}
+}

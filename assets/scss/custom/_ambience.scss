@@ -1,0 +1,90 @@
+.ambience{
+&__sub{
+&.topSpacing{
+@include media-breakpoint-up(xl) {
+margin-top:4rem;
+} 
+@include media-breakpoint-between(md,xl) {
+margin-top:3rem;
+} 
+@include media-breakpoint-down(md) {
+margin-top:2rem;
+}     
+}
+& > .container{
+@include media-breakpoint-up(xl) {
+padding-left:4rem;
+padding-right:4rem;
+} 
+@include media-breakpoint-between(md,xl) {
+padding-left:2rem;
+padding-right:2rem;
+}   
+}
+&-head{
+text-align: center;
+& > .icon{
+@include media-breakpoint-up(md) {
+height:90px;
+width:90px;
+border-radius: 45px;
+} 
+@include media-breakpoint-down(md) {
+height:80px;
+width:80px;
+border-radius: 40px;
+} 
+display:inline-block;
+background:linear-gradient(#f4782e, #fc9c63);
+position: relative;
+&::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+@include media-breakpoint-up(md) {
+height:90px;
+width:90px;
+border-radius: 45px;
+background:center/33px url(../images/infra/icon.svg) no-repeat;
+} 
+@include media-breakpoint-down(md) {
+height:80px;
+width:80px;
+border-radius: 40px;
+background:center/30px url(../images/infra/icon.svg) no-repeat;
+} 
+}
+}
+& > h2{
+font-family:"Khula-Bold",sans-serif;
+@include media-breakpoint-up(xl) {
+font-size:2.5rem;
+margin-top:0.25rem;
+} 
+@include media-breakpoint-between(md,xl) {
+font-size:2.25rem;
+margin-top:0.125rem;
+} 
+@include media-breakpoint-down(md) {
+font-size:1.75rem;
+}     
+}
+}
+&-image{
+    @include media-breakpoint-up(xl) {
+    margin-top:1rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        margin-top:0.75rem;
+    }
+    @include media-breakpoint-down(md) {
+        margin-top:0.5rem;
+    }
+
+& > img {
+width:100%;
+}
+}
+}
+}

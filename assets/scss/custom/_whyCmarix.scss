@@ -1,0 +1,128 @@
+.whyPosistrength{
+    &__sub{
+        &.topSpacing{
+    @include media-breakpoint-up(xl) {
+    margin-top:4rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        margin-top:3rem;
+    } 
+    @include media-breakpoint-down(md) {
+        margin-top:2rem;
+    }  
+    }
+    & > .container{
+    @include media-breakpoint-up(xl) {
+    padding-left:4rem;
+    padding-right:4rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        padding-left:2rem;
+        padding-right:2rem;
+    }   
+    }
+    &-head{
+    & > h4{
+    font-family: "Khula-Bold",sans-serif;
+    padding-left:4rem;
+    font-size:17px;
+    position: relative;
+    font-style: italic;
+    &::before{
+    content:'';
+    position:absolute;
+    height:4px;
+    width:40px;
+    background-color:$color-f4782e;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left:0px;
+    top:5px;
+    }
+    }
+    & > h2{
+    font-family: "Khula-Bold",sans-serif;
+    @include media-breakpoint-up(xl) {
+    font-size:2.5rem;
+    line-height: 3.25rem;
+    margin-top:1.5rem;
+    margin-bottom:1.25rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+            font-size:2.25rem;
+            line-height: 3rem;
+            margin-top:1.25rem;
+            margin-bottom:1rem;
+        } 
+        @include media-breakpoint-down(md) {
+            font-size:1.75rem;
+            line-height: 2rem;
+            margin-top:1rem;
+            margin-bottom:0.75rem;
+        } 
+    
+    }
+    } 
+    &-content{
+&-left{
+display: flex;
+
+
+@include media-breakpoint-up(xl) {
+margin-bottom:2.5rem;
+} 
+@include media-breakpoint-between(md,xl) {
+margin-bottom:2rem;
+} 
+
+
+& > .count{
+    font-family:"Khula-Bold",sans-serif;
+    @include media-breakpoint-up(xl) {
+        font-size:2rem;  
+        margin-right:1rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        font-size:1.75rem;
+        margin-right:0.75rem;
+    } 
+    @include media-breakpoint-down(md) {
+        font-size:1.5rem;  
+        margin-right:0.5rem;
+    }
+}
+& > h2{
+flex:1;
+margin-bottom:0px;  
+@include media-breakpoint-up(xl) {
+padding-right:2rem;
+} 
+@include media-breakpoint-between(md,xl) {
+font-size:1.75rem;
+padding-right:1rem;
+} 
+@include media-breakpoint-down(md) {
+font-size:1.5rem;           
+}           
+}
+}
+&-right{
+& > p{
+font-family: "OpenSans-Light",sans-serif;
+@include media-breakpoint-up(xl) {
+font-size: 20px;
+line-height: 30px;
+} 
+@include media-breakpoint-between(md,xl) {
+font-size: 19px;
+line-height: 28px;
+} 
+@include media-breakpoint-down(md) {
+font-size: 17px;
+line-height: 26px;
+}     
+}
+}
+    }
+    }
+    }

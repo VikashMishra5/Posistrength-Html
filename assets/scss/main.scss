@@ -1,0 +1,126 @@
+@import "bootstrap";
+
+
+@font-face {
+    font-family: "Khula-Light";
+    src: url("../fonts/Kula/Khula-Light.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 300;
+    font-style: normal
+}
+@font-face {
+    font-family: "Khula";
+    src: url("../fonts/Kula/Khula-Regular.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: "Khula-SemiBold";
+    src: url("../fonts/Kula/Khula-SemiBold.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 600;
+    font-style: normal
+}
+@font-face {
+    font-family: "Khula-Bold";
+    src: url("../fonts/Kula/Khula-Bold.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 300;
+    font-style: normal
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: "OpenSans-Medium";
+    src: url("../fonts/OpenSans/OpenSans-Medium.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 500;
+    font-style: normal
+}
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 600;
+    font-style: normal
+}
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+    font-stretch: normal;
+    font-weight: 700;
+    font-style: normal
+}
+
+body{
+font-family:"OpenSans", sans-serif;
+.container{
+@include media-breakpoint-down(lg) {
+max-width:100%;
+padding-left:1.5rem;
+padding-right:1.5rem;
+}  
+}
+}
+
+@import "custom/variable";
+@import "custom/header";
+@import "custom/banner";
+@import "custom/portfolio";
+@import "custom/whatwecan";
+@import "custom/platform";
+@import "custom/hireservices";
+@import "custom/industries";
+@import "custom/platformsreview";
+@import "custom/whatwedo";
+@import "custom/poweredby";
+@import "custom/getaquote";
+@import "custom/ourblogs";
+@import "custom/footer";
+
+@import "custom/banner-inner";
+@import "custom/growWithUs";
+@import "custom/innerWe";
+@import "custom/aboutUs";
+@import "custom/mission";
+@import "custom/approach";
+@import "custom/readyTo";
+@import "custom/technology";
+@import "custom/aboutContact";
+@import "custom/contactBottom";
+@import "custom/whyCmarix";
+@import "custom/doyouKnow";
+@import "custom/certificates";
+@import "custom/ranked";
+@import "custom/ourPillar";
+@import "custom/ourTeam";
+@import "custom/infrastructure";
+@import "custom/ambience";
+@import "custom/careerPoints";
+@import "custom/careerContact";
+@import "custom/weLookFor";
+@import "custom/currentOpening";
+@import "custom/confidential";
+@import "custom/life";
+@import "custom/lifeCelebration";
+@import "custom/lifeMission";
+@import "custom/leverage";
+@import "custom/ourSolution";
+@import "custom/technologyServices";
+@import "custom/implementedGrow";
+@import "custom/blog";
+@import "custom/portfolioTabs";

@@ -1,0 +1,179 @@
+.careerPoints{
+&__sub{
+    &.topSpacing{
+        @include media-breakpoint-up(xl) {
+        margin-top:4rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+        margin-top:3rem;
+        } 
+        @include media-breakpoint-down(md) {
+        margin-top:2rem;
+        }     
+        }
+        & > .container{
+        @include media-breakpoint-up(xl) {
+        padding-left:4rem;
+        padding-right:4rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+        padding-left:2rem;
+        padding-right:2rem;
+        }   
+        }
+        .mobile-reverse{
+            @include media-breakpoint-down(md) {
+            flex-direction: column-reverse;
+            }     
+            }
+            &-head{
+            & > h3{
+            font-family: "Khula-Bold",sans-serif;
+            @include media-breakpoint-up(xl) {
+            font-size:1.5rem;
+            margin-top:1.5rem;
+            margin-bottom:0.5rem;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                font-size:1.25rem;
+                margin-top:1.25rem;
+            margin-bottom:0.375rem;
+            } 
+            @include media-breakpoint-down(md) {
+                font-size:1.125rem;
+                margin-top:1rem;
+                margin-bottom:0.25rem;
+            } 
+            & > span{
+            display:inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-family:arial,sans-serif;
+            font-weight: bold;
+            @include media-breakpoint-up(xl) {
+                height:45px;
+                width:45px;
+                border-radius:22.5px;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                height:40px;
+                width:40px;
+                border-radius:20px;
+            } 
+            @include media-breakpoint-down(md) {
+                height:35px;
+                width:35px;
+                border-radius:17.5px;
+            } 
+            
+            &.color1{background:linear-gradient(#317eef, #80b0fa);}
+            &.color2{background:linear-gradient(#fa8f8f, #fba6a6);}
+            &.color3{background:linear-gradient(#f4782e, #fc9c63)}
+            }
+            }
+            } 
+            &-content{
+            &.right{
+            @include media-breakpoint-up(md) {
+            max-width:450px;
+            margin-left:auto;
+            }     
+            }
+            }
+            &-img{
+            overflow: hidden;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                height: 420px;
+                max-width: 450px;
+                width: 100%;
+                position: relative;
+                @include media-breakpoint-up(lg) {
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                }
+                @include media-breakpoint-up(md) {
+                background-size:contain;
+                }
+                @include media-breakpoint-down(md) {
+                background-size:cover;
+                }
+            
+                &.carrer1{
+                background-image:url(../images/career/carrer1.jpg);
+            
+                @include media-breakpoint-up(xl) {
+                background-position: top right -300px;
+                }
+                @include media-breakpoint-between(md,xl) {
+                background-position: top right -400px;
+                }
+                @include media-breakpoint-up(md) {
+                margin-left: auto;
+                } 
+                
+                -webkit-animation: imagemove1 12s infinite alternate;
+                animation: imagemove1 12s infinite alternate;
+            
+                }
+                &.carrer2{
+                    background-image: url(../images/career/carrer2.jpg);
+                    @include media-breakpoint-up(xl) {
+                        background-position: top 50px left -480px;
+                        }
+                        @include media-breakpoint-between(md,xl) {
+                        background-position: top -10px left -450px;
+                        }
+                        -webkit-animation: imagemove2 12s infinite alternate;
+                        animation: imagemove2 12s infinite alternate;
+                }
+                &.devices{
+                    background-image: url(../images/infra/infra3.jpg);
+                    @include media-breakpoint-up(xl) {
+                        background-position: top right -300px;
+                        }
+                        @include media-breakpoint-between(md,xl) {
+                        background-position: top right -400px;
+                        }
+                @include media-breakpoint-up(md) {
+                    margin-left: auto;
+                    } 
+                    -webkit-animation: imagemove1 12s infinite alternate;
+                    animation: imagemove1 12s infinite alternate;
+                }
+                &.network{
+                    background-position: left;
+                    background-image: url(../images/infra/infra4.jpg);
+                    @include media-breakpoint-up(xl) {
+                        background-position: top 50px left 170px;
+                        }
+                        @include media-breakpoint-between(md,xl) {
+                        background-position: top -10px left 120px;
+                        }
+                        -webkit-animation: imagemove2 12s infinite alternate;
+                        animation: imagemove2 12s infinite alternate;
+                }
+            
+            @keyframes imagemove1 {
+            0% {    background-position: top right -300px;}
+            50% {        background-position: top right 0;}
+            100% {background-position: top right -300px;}
+            }
+            @-webkit-keyframes imagemove1{
+            0% {    background-position: top right -300px;}
+            50% {        background-position: top right 0;}
+            100% {background-position: top right -300px;}
+            }
+                @keyframes imagemove2 {
+                0% {background-position:top 50px left 20px;}
+                50% {background-position: top 50px left -120px;}
+                100% {background-position: top 50px left 20px;}
+                }
+                @-webkit-keyframes imagemove2{
+                0% {background-position:top 50px left 20px;}
+                50% {background-position: top 50px left -120px;}
+                100% {background-position: top 50px left 20px;}
+                }
+            
+            }
+}
+}

@@ -1,0 +1,172 @@
+.hireServices{
+background-color:#dee8ff;
+&__sub{
+    @include media-breakpoint-up(xl) {
+        padding:4.5rem 0rem 4rem;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                padding:3.5rem 0rem 3rem; 
+            } 
+            @include media-breakpoint-down(md) {
+                padding:2.5rem 0rem 2rem;
+            } 
+&.topSpacing{
+    @include media-breakpoint-up(xl) {
+margin-top:7rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+margin-top:5.5rem;
+    
+    } 
+    @include media-breakpoint-down(md) {
+margin-top:3.5rem;
+    } 
+    
+}
+}
+
+&__top{
+& > h2{
+    font-family: 'Khula-Bold',sans-serif;
+    margin-bottom: 0.125rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+    font-size: 2rem;
+    line-height: 2rem;
+    } 
+    @include media-breakpoint-down(md) {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    }     
+}
+& > p{
+    @include media-breakpoint-up(xl) {
+font-size:24px;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        font-size:22px;
+    } 
+    @include media-breakpoint-down(md) {
+        font-size:19px;
+    }     
+}
+}
+&__content{
+
+@include media-breakpoint-up(xl) {
+margin-top:3rem;
+} 
+@include media-breakpoint-between(md,xl) {
+margin-top:2rem;
+} 
+@include media-breakpoint-down(md) {
+margin-top:1.5rem;
+} 
+
+@include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    } 
+
+&-child{
+@include media-breakpoint-up(lg) {
+    max-width:20%;
+    flex-basis:20%;
+    padding:0.5rem;
+    } 
+    @include media-breakpoint-down(lg) {
+margin-bottom:1rem;
+    }
+}
+&-icon{
+    height:100px;
+    width:100px;
+    border-radius:50px;
+    margin: 1.5rem auto;
+    border: 2px solid $black;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    &::after{
+    content: '';
+    position:absolute;
+    height:40px;
+    width:40px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    }
+    &.fullstack{
+    &::after{
+        background:center / 40px url(../images/services/fullstack.png)no-repeat ;
+    }
+    }
+    &.angular{
+        &::after{
+            background:center / 40px url(../images/services/angular.png)no-repeat ;
+        }
+    }
+    &.wordpress{
+        &::after{
+            background:center / 40px url(../images/services/wordpress.png)no-repeat ;
+        }
+    }
+    &.laravel{
+        &::after{
+            background:center / 40px url(../images/services/laravel.png)no-repeat ;
+        }
+    }
+    &.flutter{
+        &::after{
+            background:center / 40px url(../images/services/flutter.png)no-repeat ;
+        }
+    }
+    }
+&-link{
+display:inline-block;
+text-decoration: none;
+text-align: center;
+width:100%;
+height:100%;
+padding:0.5rem;
+border: 1px solid #b7cbf9;
+border-radius: 3px;
+transition:all 0.2s ease-in-out;
+& > h4{
+font-size:14px;
+line-height:21px;
+color:$black;
+}
+& > span{
+display:inline-block;
+border:1px solid $black;
+padding:0.25rem 0.75rem;
+font-size:13px;
+margin:0.75rem auto;
+color:$black;
+transform:scale(0);
+border-radius:2px;
+transition:all 0.2s ease-in-out;
+}
+&:hover{
+background-color: #cfdcfb;
+.hireServices__content-icon{
+    height:80px;
+    width:80px;
+    &::after{
+        height:35px;
+        width:35px;
+        background-size: 35px;
+    }
+}
+& > span{
+    transform:scale(1);
+    }
+}
+}
+
+}
+}

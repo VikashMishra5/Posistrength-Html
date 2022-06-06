@@ -1,0 +1,153 @@
+.portfolioTabs{
+&__sub{
+    &.topSpacing{
+        @include media-breakpoint-up(xl) {
+        margin-top:4rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+            margin-top:3rem;
+        } 
+        @include media-breakpoint-down(md) {
+            margin-top:2rem;
+        }  
+        }
+        & > .container{
+            @include media-breakpoint-up(xl) {
+            padding-left:4rem;
+            padding-right:4rem;
+            } 
+            @include media-breakpoint-between(md,xl) {
+                padding-left:2rem;
+                padding-right:2rem;
+            }   
+            }
+            &-con{
+            .nav{
+&-tabs{
+justify-content: center;
+margin-bottom:2rem;
+}
+&-item{}
+&-link{
+color:$black;
+font-family: 'Khula-Bold',sans-serif;
+@include media-breakpoint-up(xl) {
+    font-size:1.5rem;
+} 
+@include media-breakpoint-between(md,xl) {
+    font-size:1.25rem;
+} 
+@include media-breakpoint-down(md) {
+    font-size:1rem;
+} 
+@include media-breakpoint-down(sm) {
+padding-left:0.5rem;
+padding-right:0.5rem;
+}
+&.active{
+color:$color-f4782e;
+border-bottom: 5px solid #f4782e;
+position: relative;
+&::after{
+content:'';
+position:absolute;
+width: 0; 
+height: 0; 
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-top: 8px solid #f4782e;
+bottom: -13px;
+left: 50%;
+transform: translateX(-50%);
+}
+}
+}
+
+            }
+            }
+            &-col{
+                margin-bottom:1.5rem;
+                text-decoration:none;
+                display:block;
+            &Child{
+                position: relative;
+                border-radius: 5px;
+            & > img{
+            max-width:100%;
+            border-radius: 5px;
+            }
+            &-Overflow{
+                height:100%;
+                width:100%;
+                position:absolute;
+                background-color:rgba(0,0,0,0.7);
+                left:0;
+                right:0;
+                bottom:0;
+                transform:scale(0);
+                transition: 0.2s ease-in-out;
+                border-radius: 5px;
+                &-text{
+                    position:absolute;
+                    top:50%;
+                    transform: translateY(-50%); 
+                    color:$white; 
+                    padding:0rem 1.5rem;
+                    text-align: center;
+                    font-family: 'Khula-Bold',sans-serif;
+                    font-size:1.1rem;
+                    line-height: 24px;
+                }
+                }
+                &:hover{
+                    .portfolioTabs__sub-colChild-Overflow{
+                        transform:scale(1);    
+                    }
+                }
+                &-bottom{
+                    margin-top: 1rem;
+                & > .industry{
+                display:inline-block;
+                padding:0.25rem 0.5rem 0.1rem;
+                border:1px solid $color-f4782e;
+                color:$color-f4782e;
+                font-size:0.8rem;
+                border-radius: 3px;
+                font-family: 'Khula-Bold',sans-serif;
+                }
+                & > h2{
+                    font-family: 'Khula-Bold',sans-serif;     
+                    margin-top:0.75rem;    
+                    color:$gray-900;        
+@include media-breakpoint-up(xl) {
+font-size: 1.25rem;
+} 
+@include media-breakpoint-down(xl) {
+    font-size:1.125rem;
+} 
+
+                }
+                }
+            }
+            &btn{
+                margin-top:1.5rem;
+            & > span{
+            padding:0.25rem 0.65rem 0rem;
+            display:inline-block;
+            border-radius:3px;
+            font-family: 'Khula-Bold',sans-serif;
+            font-size:1rem;
+            color:$black;
+            margin-right:0.5rem;
+            text-transform: uppercase;
+            &:nth-last-child(1){
+            margin-right:0;
+            }
+            &.web{background-color: #ffcbcb;}
+            &.mobile{background-color: #c7ff9e;}
+            &.ui{background-color: #ff8b58;}
+            }
+            }
+            }
+}
+}

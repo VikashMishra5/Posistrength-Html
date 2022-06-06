@@ -1,0 +1,242 @@
+.certificates{
+&__sub{
+&.topSpacing{
+    @include media-breakpoint-up(xl) {
+margin-top:4rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+margin-top:3rem;
+   
+    } 
+    @include media-breakpoint-down(md) {
+margin-top:2rem;
+    } 
+    
+}
+&-Head{
+display:flex;
+align-items: center;
+@include media-breakpoint-up(xl) {
+margin-bottom:2rem;
+} 
+@include media-breakpoint-between(md,xl) {
+ margin-bottom:1.75rem;
+} 
+@include media-breakpoint-down(md) {
+margin-bottom:1.5rem;
+} 
+&Icon{
+display:inline-block;
+
+@include media-breakpoint-up(xl) {
+height:90px;
+width:90px;
+border-radius: 45px;
+    } 
+@include media-breakpoint-down(xl) {
+height:80px;
+width: 80px;
+border-radius: 40px;
+    } 
+
+&.certificate{
+background:linear-gradient(#317eef,#80b0fa);
+position: relative;
+&::after{
+    content:'';
+    position:absolute;
+    background:center / 33px url(../images/certification/certificate-icon.svg) no-repeat;    
+    @include media-breakpoint-up(xl) {
+        height:60px;
+        width:60px;
+        border-radius: 30px;
+        top:15px;
+        left:17px;
+            } 
+        @include media-breakpoint-down(xl) {
+        height:55px;
+        width: 55px;
+        border-radius: 27.5px;
+        top:12.5px;
+        left:14px;
+    background-size: 30px;
+            } 
+ 
+    }
+}
+&.awards{
+background:linear-gradient(#fa8f8f, #fba6a6);
+position: relative;
+&::after{
+    content:'';
+    position:absolute;
+    background:center / 33px url(../images/certification/award-icon.svg) no-repeat;    
+    @include media-breakpoint-up(xl) {
+        height:60px;
+        width:60px;
+        border-radius: 30px;
+        top:15px;
+        left:17px;
+            } 
+        @include media-breakpoint-down(xl) {
+        height:55px;
+        width: 55px;
+        border-radius: 27.5px;
+        top:12.5px;
+        left:14px;
+    background-size: 30px;
+            } 
+ 
+    }
+}
+&.alliances{
+background:linear-gradient(#31f7cc,#74f9dc);
+position: relative;
+&::after{
+    content:'';
+    position:absolute;
+    background:center / 33px url(../images/certification/award-icon.svg) no-repeat;    
+    @include media-breakpoint-up(xl) {
+        height:60px;
+        width:60px;
+        border-radius: 30px;
+        top:15px;
+        left:17px;
+            } 
+        @include media-breakpoint-down(xl) {
+        height:55px;
+        width: 55px;
+        border-radius: 27.5px;
+        top:12.5px;
+        left:14px;
+    background-size: 30px;
+            } 
+ 
+    }
+}
+}
+&Title{
+font-family: 'Khula-Bold',sans-serif;
+margin-bottom:0;
+@include media-breakpoint-up(xl) {
+font-size:2.5rem;
+} 
+@include media-breakpoint-between(md,xl) {
+font-size:2rem;
+} 
+@include media-breakpoint-down(md) {
+font-size:1.5rem;
+} 
+}
+}
+
+&-list{
+    display: flex;
+    align-items: center;
+    box-shadow:0px 1px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    min-height: 168px;
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom:2rem;
+        border-radius: 100px;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        margin-bottom:1.75rem;
+        border-radius: 100px;
+    } 
+    @include media-breakpoint-down(md) {
+        margin-bottom:1.5rem;
+        flex-direction: column;
+        padding:1rem;
+        border-radius:5px;
+    }     
+
+    &Left{ 
+
+
+    @include media-breakpoint-up(xl) {
+        padding: 1.5rem 0;
+    } 
+    @include media-breakpoint-up(md) {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        align-items: center;
+    }
+    @include media-breakpoint-between(md,xl) {
+        padding: 1.25rem 0;
+    } 
+  
+    @include media-breakpoint-down(md) {
+        padding: 1rem;
+        border-radius:100px;
+    }     
+
+    &.color{
+&1{
+background-color:#8f8efc;  
+}
+&2{
+background-color:#55fbd8;  
+}
+&3{
+background-color:#4b92fb;  
+}
+&4{
+background-color:#fda2a2;  
+}
+    }
+    & > img{
+        position: relative;
+
+    @include media-breakpoint-up(xl) {
+        right: -40px;
+        max-width: 100px;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        right: -35px;
+    max-width: 90px;
+    } 
+    @include media-breakpoint-down(md) {
+        right: 0px;
+        max-width: 80px;
+    }     
+    }
+    }
+    &Right{
+    @include media-breakpoint-up(xl) {
+        padding:1.5rem 1.5rem 1.5rem 160px;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        padding:1.25rem 1.25rem 1.25rem 145px;   
+    } 
+    @include media-breakpoint-down(md) {
+        padding:1rem; 
+        text-align: center;
+    }     
+    & > h3{
+    font-family: 'Khula-Bold',sans-serif;  
+    @include media-breakpoint-up(xl) {
+font-size:1.25rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        font-size:1.125rem;
+    } 
+    @include media-breakpoint-down(md) {
+        font-size:1rem;
+    } 
+    
+    }
+    & > p{
+    margin-bottom:0;
+    }
+    }
+}
+
+}
+}

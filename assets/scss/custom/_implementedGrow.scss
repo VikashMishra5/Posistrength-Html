@@ -1,0 +1,185 @@
+.ImplementedGrow{
+&__sub{
+    &.topSpacing{
+        @include media-breakpoint-up(xl) {
+        margin-top:4rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+        margin-top:3rem;
+        
+        } 
+        @include media-breakpoint-down(md) {
+        margin-top:2rem;
+        }     
+        }
+    
+}
+&__topText{
+    & > h3{
+        display: inline-block;
+        background-color: #014260;
+        color: $white;
+        font-family: 'Khula-Bold',sans-serif;
+        margin-bottom: 0;
+        position: relative;
+        @include media-breakpoint-up(md) {
+            font-size: 1.6rem;
+            padding: 0.8rem 1.5rem 0.4rem;
+        } 
+        @include media-breakpoint-down(md) {
+            font-size: 1.35rem;
+        padding: 0.65rem 1.15rem 0.3rem;
+        } 
+     &::after{
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        z-index: 1;
+        transform: rotate(-55deg);
+        @include media-breakpoint-up(md) {
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 40px solid #014260;
+            bottom: -24px;
+            left: 44px;
+        } 
+        @include media-breakpoint-down(md) {
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 35px solid #014260;
+            bottom: -22px;
+            left: 35px;
+        } 
+     }   
+    }
+    }
+    &-head{
+        font-family: 'Khula-Bold',sans-serif;
+        @include media-breakpoint-up(xl) {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            margin: 2rem 0;
+    
+        } 
+        @include media-breakpoint-between(md,xl) {
+            font-size: 2rem;
+            line-height: 2rem;
+            margin: 1.75rem 0;
+        } 
+        @include media-breakpoint-down(md) {
+            font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin: 1.5rem 0;
+        }     
+    }
+    &-Carousel{
+        .carousel-control-prev, .carousel-control-next{
+            width: 50px;
+            opacity: 1;
+        }
+        .carousel-inner{
+         @include media-breakpoint-up(lg) {
+            padding:0 80px;
+            }
+            @include media-breakpoint-down(xl) {
+                padding:0 50px;
+            }
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon{
+            background-color:#014260;
+            @include media-breakpoint-up(lg) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            @include media-breakpoint-down(xl) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    &-row{
+    @include media-breakpoint-up(md) {
+    display:flex;
+    align-items:center;
+    justify-content: center; 
+    }  
+    @include media-breakpoint-down(md) {
+text-align: center;
+    }
+    }
+    &-left{
+       & > p{
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
+        }
+        @include media-breakpoint-down(xl) {
+        font-size: 1.25rem;
+        padding-right:0.75rem;
+        }
+        @include media-breakpoint-between(md,lg) {
+            max-width: 200px;
+        }
+       } 
+    }
+    &-center{
+& > img{
+@include media-breakpoint-up(lg) {
+    max-width:250px;
+}
+@include media-breakpoint-down(xl) {
+    max-width:200px;
+}
+@include media-breakpoint-down(md) {
+  margin:0px auto;
+}
+}
+    }
+    &-right{
+        @include media-breakpoint-up(lg) {
+            display:flex;
+        }
+
+&-content{
+& > h3{
+font-family: 'Khula-Bold',sans-serif;
+font-size:1.25rem;
+margin-bottom:0;
+}
+& > p{
+@include media-breakpoint-up(lg) {
+margin-bottom:0;
+}
+}
+&:nth-last-child(1){
+@include media-breakpoint-up(lg) {
+    margin-left:1rem;
+}
+}
+}
+    }
+&-button{
+    & > a{
+    margin-top:1rem;
+    text-decoration: none;
+    padding: 0.9rem 3.5rem 0.9rem 2rem;
+    border-radius: 28px;
+    position: relative;
+    width: 240px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    color: #fff;
+    font-family: 'OpenSans-Bold',sans-serif;
+    display: block;
+    font-size: 17px;
+    background: center right 30px/26px url(../images/about/arrow-white.svg) no-repeat $color-f4782e;
+    transition: 0.2s ease-in-out;
+    &:hover{
+    background-color:$color-014260;
+    }
+    }
+}
+
+}

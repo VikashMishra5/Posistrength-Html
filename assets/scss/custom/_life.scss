@@ -1,0 +1,30 @@
+.life{
+&Gallery{
+&__sub{
+&.topSpacing{
+@include media-breakpoint-up(xl) {
+margin-top:4rem;
+} 
+@include media-breakpoint-between(md,xl) {
+    margin-top:3rem;
+} 
+@include media-breakpoint-down(md) {
+    margin-top:2rem;
+}  
+}
+&-row{
+.owl-dots{
+display:none;
+}
+}
+&-col{
+
+img{
+width:100%;
+border-radius: 15px;
+padding:0.65rem;
+}
+}
+}
+}
+}

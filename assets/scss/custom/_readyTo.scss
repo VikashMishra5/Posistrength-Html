@@ -1,0 +1,109 @@
+.readyTo{
+&__sub{
+    background-color: #0373a7;
+&.topSpacing{
+@include media-breakpoint-up(xl) {
+margin-top:5rem;
+padding-top:5rem;
+padding-bottom:5rem;
+} 
+@include media-breakpoint-between(md,xl) {
+margin-top:4rem;
+padding-top:4rem;
+padding-bottom:4rem;
+} 
+@include media-breakpoint-down(md) {
+margin-top:3rem;
+padding-top: 1rem;
+padding-bottom: 2rem; 
+}        
+}
+&.topPadding{
+    @include media-breakpoint-up(xl) {
+        padding-top:5rem;
+        padding-bottom:5rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+        padding-top:4rem;
+        padding-bottom:4rem;
+        } 
+        @include media-breakpoint-down(md) {
+        padding-top: 1rem;
+        padding-bottom: 2rem; 
+        }    
+}
+& > .container{
+    @include media-breakpoint-up(xl) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    } 
+    @include media-breakpoint-between(md,xl) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    } 
+}
+&-con{
+background-color: #067bb1;
+border-radius: 10px;
+box-shadow:0px 3px 6px #036d9e;
+text-align:center;
+position: relative;
+@include media-breakpoint-up(xl) {
+padding:2rem 1.65rem 2.8rem;
+margin: 0 1rem;
+} 
+@include media-breakpoint-between(md,xl) {
+padding:1.8rem 1.5rem 2.6rem;
+} 
+@include media-breakpoint-up(md) {
+height:100%;
+} 
+@include media-breakpoint-down(md) {
+padding: 1.6rem 1.25rem 2.2rem;
+margin: 1.5rem 0;
+} 
+& > h3{
+font-family: 'Khula-Light',sans-serif;
+color:$white;
+& > span{
+font-family: 'Khula-Bold',sans-serif;
+}
+@include media-breakpoint-up(xl) {
+font-size:1.625rem;
+margin-bottom:0.625rem;
+} 
+@include media-breakpoint-between(md,xl) {
+font-size:1.45rem;
+} 
+@include media-breakpoint-down(md) {
+font-size:1.3rem;
+} 
+}
+& > p{
+color:$white;
+font-style: italic;
+}
+}
+&-link{
+position:absolute;
+bottom:-25px;
+left: 0px;
+width:100%;
+& > a{
+display: inline-block;
+color: $black;
+text-decoration: none;
+padding: 1rem 3rem 1rem 1.5rem;
+border-radius: 30px;
+font-family: 'OpenSans-SemiBold',sans-serif;
+background: center right 15px/26px url(../images/about/arrow-black.svg) no-repeat $white;
+transition:all 0.3s ease-in-out;
+&:hover{
+color:$white;
+background-color: $black;
+background: center right 15px/26px url(../images/about/arrow-white.svg) no-repeat $black;
+}
+}
+}
+}
+}

@@ -1,0 +1,171 @@
+.banner {
+
+background-color: #dee8ff;
+
+&__inner{
+
+
+@include media-breakpoint-up(xl) {
+padding-top:100px;
+}
+@include media-breakpoint-down(xl) {
+padding-top:90px;
+}
+&-sub{
+&.paddingTopBot{
+@include media-breakpoint-up(sm) {
+padding:2rem 0;
+} 
+@include media-breakpoint-down(sm) {
+padding:1.5rem 0;
+} 
+}
+
+}
+&-left{
+    @include media-breakpoint-down(lg) {
+        margin-top:1.5rem;
+    } 
+    &-headSub{
+width:75px;
+padding-right:30px;
+    }
+    &-headBorder{
+        width: 45px;
+        height: 4px;
+        background-color:$black;
+        border-radius: 2px;
+        margin-bottom: 0.75rem;
+        margin-left:3px;
+        position: relative;
+        & > span{
+        position:absolute;
+        background-color:$black;
+        height:4px;
+        width:4px;
+        border-radius: 2px;
+        top:0px;
+        display: inline-block;
+        &.one{right:-10px;}
+        &.two{right:-20px;}
+        &.three{right:-30px;}
+
+
+
+        animation-name: border-animation;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: border-animation;
+  -webkit-animation-duration: 1.25s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+
+
+        @-webkit-keyframes border-animation{
+            0%   {width:5px;}
+            40%  {width:12px;}
+            50%  {width:12px;}
+            85%  {width:5px;}
+            100%  {width:5px;}
+            }
+            
+            @keyframes border-animation{
+                0%   {width:5px;}
+                40%  {width:12px;}
+                50%  {width:12px;}
+                85%  {width:5px;}
+                100%  {width:5px;}
+            }
+
+        }
+
+    }
+&-head{
+    font-family: "Khula-Bold",sans-serif;
+    color:$black;
+& > h1{
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+        } 
+        @include media-breakpoint-between(md,xl) {
+            font-size: 2.5rem;
+        } 
+        @include media-breakpoint-down(md) {
+            font-size: 2rem;
+        } 
+    
+}
+}
+&-para{
+    font-size: 17px;
+    line-height: 28px;
+    @include media-breakpoint-up(lg) {
+    max-width: 500px;
+    } 
+    @include media-breakpoint-up(xlg) {
+    margin-bottom:1.75rem;
+     } 
+}
+&-inquire{
+& > a{
+display:inline-block;
+text-decoration: none;
+
+font-family: "OpenSans-Bold",sans-serif;
+color:$black;
+border:3px solid $black;
+border-radius:28px;
+transition: all 0.3s ease-in-out;
+background: center right 15px/25px url(../images/about/arrow-black.svg) no-repeat;
+
+@include media-breakpoint-up(xl) {
+padding:0.75rem 3rem 0.75rem 1.25rem;
+} 
+@include media-breakpoint-down(xl) {
+padding:0.65rem 2.75rem 0.65rem 1rem;
+} 
+
+
+&:hover{
+background-color: $black;
+background-image: url(../images/about/arrow-white.svg);
+color:$white;
+}
+}
+}
+
+& > ul{
+list-style: none;
+margin:0;
+padding:0;
+& li{
+font-size: 18px;
+line-height: 28px;
+margin-bottom: 0.75rem;
+}
+}
+
+}
+&-right{
+    @include media-breakpoint-down(md) {
+       padding-left:1rem;
+       padding-right:1rem;
+    } 
+    text-align: center;
+    
+& > img{
+width:100%;
+max-width:550px;
+}
+&.solutions{
+    & > img{
+        max-width:350px;
+        margin-bottom:2rem;
+        }   
+}
+}
+
+}
+}
